@@ -20,7 +20,11 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-	<title>React App</title>
+	<title>Cook Book</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -28,16 +32,166 @@
 		You need to enable JavaScript to run this app.
 	</noscript>
 	<div id="root"></div>
+	
+	
 	<!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
+     From here on it is the HTML from our previous project
     -->
+	
+	
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="navbar-brand" >Group 4 recipes</div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+        <a class="nav-link" href="#wraps">Wraps</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#bowl">Burrito Bowl</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="#potato-bowl">Sweet Potato Bowl</a>
+  </li>
+  <li class="nav-item">
+  <a class="nav-link" href="#pasta">Pasta</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#pancakes">Pancakes</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#burger">Burger</a>
+</li>
+</li>
+    </ul>
+
+  </div>
+</nav>
+        <div class="card-deck">
+              <div class="card" style="width: 30vw;">
+                    <span> <h3 class="card-title" id="wraps"><a href="https://runningonrealfood.com/vegan-buffalo-cauliflower-wraps/ ">BUFFALO WRAPS</a> </h3></span>
+                          <div class="hover"> Vegan, dinner </div>
+                      <a href="https://runningonrealfood.com/vegan-buffalo-cauliflower-wraps/">  <img src="img/buffalo-wraps.jpg" class="card-img-top" alt="Picture of wraps"> </a>
+                      <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">1 head of cauliflower</li>
+                                <li class="list-group-item">3/4 cup flour</li>
+                                <li class="list-group-item">3/4 cup milk</li>
+                                <li class="list-group-item">1/2 cup Frank’s Buffalo Sauce</li>
+                                <li class="list-group-item">1 package soft tofu</li>
+                                <li class="list-group-item">3 tbsp fresh lemon juice</li>
+                                <li class="list-group-item">1 tbsp apple cider vinegar</li>
+                                <li class="list-group-item">garlic powder</li>
+                                <li class="list-group-item">onion powder</li>
+                                <li class="list-group-item">parsley</li>
+                                <li class="list-group-item">kale or romaine lettuce</li>
+                                <li class="list-group-item">thinly sliced cucumber</li>
+                                <li class="list-group-item">carrot</li>
+                                <li class="list-group-item">sliced avocado</li>
+                                <li class="list-group-item">large tortillas</li>
+                          </ul>
+                          <div class="button">
+                            <button id="button1" onclick="myFunction()" type="button" class="share-button">Share</button>
+                          </div>
+                      </div>
+              </div>
+              <div class="card" style="width: 30vw;">
+                      <span><h3 class="card-title" id="bowl"><a href="https://runningonrealfood.com/brown-rice-burrito-bowl/ ">BROWN RICE BURRITO BOWL</a> </h3></span>
+                      <div class="hover"> Vegan, quick, dinner </div>
+                      <a href="https://runningonrealfood.com/brown-rice-burrito-bowl/">  <img src="img/burrito-bowl.jpg" class="card-img-top" alt="Picture of burrito bowl"> </a>
+                      <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">1 avocado</li>
+                                <li class="list-group-item">2 cups cooked brown rice</li>
+                                <li class="list-group-item">1 19 oz can pinto beans</li>
+                                <li class="list-group-item">2 cups corn</li>
+                                <li class="list-group-item">1 bunch romaine lettuce</li>
+                                <li class="list-group-item">1 cup salsa</li>
+                          </ul>
+                          <div class="button">
+                            <button id="button2" onclick="myFunction()" type="button" class="share-button">Share</button>
+                          </div>
+                      </div>
+              </div>
+              <div class="card" style="width: 30vw;">
+                      <span><h3 class="card-title" id="potato-bowl"><a href="https://runningonrealfood.com/vegan-sweet-potato-tofu-bowls/">SWEET POTATO TOFU BOWLS</a> </h3></span>
+                      <div class="hover"> vegan, tofu, dinner </div>
+                      <a href="https://runningonrealfood.com/vegan-sweet-potato-tofu-bowls/">  <img src="img/sweet-potato.jpg" class="card-img-top" alt="Picture of burrito bowl"> </a>
+                      <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">1 package Tofu</li>
+                                <li class="list-group-item">soy sauce</li>
+                                <li class="list-group-item">125 gram sliced sweet potato</li>
+                                <li class="list-group-item">1–2 cups chopped broccoli (per bowl)</li>
+                                <li class="list-group-item"> 1–2 cups mushrooms (per bowl)</li>
+                                <li class="list-group-item">1/2 red pepper</li>
+                                <li class="list-group-item">1–2 cups kale or spinach</li>
+                                </ul>
+                                <div class="button">
+                                  <button id="button3" onclick="myFunction()" type="button" class="share-button">Share</button>
+                                </div>
+                      </div>
+              </div>
+        </div>
+
+                                                <!--  ROW 2 -->
+
+            <div class="card-deck">
+                  <div class="card" style="width: 30vw;">
+                        <span>  <h3 class="card-title" id="pasta"><a href="http://www.eatingwell.com/recipe/268220/vegan-mushroom-stroganoff/ ">Vegan Mushroom Stroganoff</a> </h3></span>
+                        <div class="hover"> Vegan, pasta, dinner </div>
+                          <a href="http://www.eatingwell.com/recipe/268220/vegan-mushroom-stroganoff/">  <img src="img/mushroom-strog.jpg" class="card-img-top" alt="Picture of wraps"> </a>
+                          <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">230g pasta</li>
+                                    <li class="list-group-item">onion</li>
+                                    <li class="list-group-item">3 cloves garlic</li>
+                                    <li class="list-group-item">1 pound mushrooms</li>
+                                    <li class="list-group-item">flour</li>
+                                    <li class="list-group-item"> 1,5cup dry white wine  </li>
+                                    <li class="list-group-item">1,5 cup vegetable broth</li>
+                                    <li class="list-group-item">mustard</li>
+                                    <li class="list-group-item">½ cup vegan sour cream</li>
+                              </ul>
+                              <div class="button">
+                                <button id="button4" onclick="myFunction()" type="button" class="share-button">Share</button>
+                              </div>
+                          </div>
+                  </div>
+                  <div class="card" style="width: 30vw;">
+                          <span><h3 class="card-title" id="pancakes"><a href="http://www.eatingwell.com/recipe/257348/vegan-pancakes/">Pancakes</a> </h3></span>
+                          <div class="hover"> Vegan, dessert </div>
+                          <a href="http://www.eatingwell.com/recipe/257348/vegan-pancakes//">  <img src="img/pancake.jpg" class="card-img-top" alt="Picture of burrito bowl"> </a>
+                          <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"> 1½ cups white whole-wheat flour</li>
+                                    <li class="list-group-item">baking powder</li>
+                                    <li class="list-group-item">1½ cups milk</li>
+                                    <li class="list-group-item"> ¼ cup mashed banana</li>
+                                    <li class="list-group-item">  2 tablespoons coconut oil</li>
+                              </ul>
+                              <div class="button">
+                                <button id="button5" onclick="myFunction()" type="button" class="share-button">Share</button>
+                              </div>
+                          </div>
+                  </div>
+                  <div class="card" style="width: 30vw;">
+                        <span>  <h3 class="card-title" id="burger"><a href="https://runningonrealfood.com/chickpea-veggie-burgers/">!!Burgers!!</a> </h3></span>
+                        <div class="hover"> Go for the recipe or just assemble what you like </div>
+                          <a href="https://runningonrealfood.com/chickpea-veggie-burgers/">  <img src="img/burger.jpg" class="card-img-top" alt="Picture of burrito bowl"> </a>
+                          <div class="card-body">
+                          <p>You know what to do</p>
+                          </div>
+                          <div class="button">
+                            <button id="button6" onclick="myFunction()" type="button" class="share-button">Share</button>
+                          </div>
+                  </div>
+            </div>
+<script src="index.js"></script>
+	
 </body>
 
 </html>
