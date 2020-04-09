@@ -2,15 +2,16 @@ import React from "react";
 import "./styles.css";
 
 export default function RecipeStyle(props) {
-  const { title, imgSrc, ingredient, description } = props;
+
+  const { title, recipeUrl, imgSrc } = props;
+
   return (
     <div>
       <h2> {title} </h2>
       <img src={imgSrc} alt="food img" />
-      <ul>
-        <li>{ingredient}</li>
-      </ul>
-      <p>{description}</p>
+
+  <p><a href={recipeUrl}>Go to the recipe for {title}</a></p>
+
     </div>
   );
 }
