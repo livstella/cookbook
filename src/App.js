@@ -1,48 +1,37 @@
 import React, { useState, useEffect } from "react";
 import "./styles.css";
-//import axios from "axios";
+import RecipeStyle from "./RecipeStyle"
 
 const fetchData = (recipeURL, setRecipes, setError) => {
   fetch(recipeURL)
     .then(result => result.json())
     .then(finalResult => setRecipes(finalResult))
     .catch(error => setError(error));
-  //move to a separate "helpers" file (keep functions out of the APP component)?
-  //a promise is an js object, that works with asynchronous code
-  //which may be pending, successfully fetched (you get the result) or it can fail (which error catches account for)
+
 };
 
 export default function App() {
-  //hooks/state variables have to be added inside the component (not outside)
-  const recipeURL = "https://www.themealdb.com/api/json/v1/1/categories.php";
+  const recipeURL = "https://api.spoonacular.com/recipes/random?apiKey=4075a91c4cec4364a6a65681a3cac3dd&number=6&number=3&tag=vegan";
   const [recipes, setRecipes] = useState();
   const [error, setError] = useState();
-
+    
   useEffect(() => {
     fetchData(recipeURL, setRecipes, setError);
   }, []);
-  //here, the code only runs once (with the useEffect hook, which is a lifecycle method)
-  //if we reload the component, the useEffect will be called again, UNLESS we use the brackets
-  //we want to reupdate the data when the fetch is complete, that's why we use state variables
-  /*
-  const fetchData = async () => {
-    const response = await axios.get(recipeURL);
 
-    setRecipes(response.data);
-    setError(console.log("Couldn't fetch data!"));
-  };
-*/
   const recipeItems = recipes
-    ? recipes.categories.map((element, index) => {
+    ? recipes.recipes.map((element, index) => {
         return (
-          <div key={index}>
-            <div>Recipe Id: {element.idCategory}</div>
-            <div>Category: {element.strCategory}</div>
-            <div>Category URL: {element.strCategoryThumb}</div>
-            <button onClick={() => setRecipes((recipes.categories = ""))}>
-              {console.log(recipes.categories[index])}
-              Delete a recipe
-            </button>
+          <div>
+            <RecipeStyle 
+            title={element.title}
+            recipeURL={element.sourceUrl}
+            imgSrc={element.image}
+          />
+          <button 
+            onClick={() => console.log(recipes.recipes[index])}> 
+            Delete a recipe
+        </button>
           </div>
         );
       })
@@ -55,9 +44,10 @@ export default function App() {
         Fetch Data
       </button>
       <br />{" "}
-      {/*when you take in parameters you have to declare an anonymous function*/}
       <div>{recipeItems}</div>
       <div>{error}</div>
     </div>
   );
 }
+/*setRecipes((recipes.recipes = ""))}
+*/
