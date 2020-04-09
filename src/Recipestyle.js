@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.css";
 
 export default function RecipeStyle(props) {
-  const { title, imgSrc, ingredient } = props;
+  const { title, imgSrc, ingredient, description } = props;
   return (
     <div>
       <h2> {title} </h2>
@@ -10,6 +10,7 @@ export default function RecipeStyle(props) {
       <ul>
         <li>{ingredient}</li>
       </ul>
+      <p>{description}</p>
     </div>
   );
 }
