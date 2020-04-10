@@ -2,6 +2,7 @@ import React from "react";
 import "./styles.css";
 
 export default function RecipeStyle(props) {
+
   const { title, recipeUrl, imgSrc, deleteR, creditsText} = props;
   return (
     <div class="card">
@@ -16,6 +17,7 @@ export default function RecipeStyle(props) {
               Delete a recipe
           </button>
       </div>
+
     </div>
   );
 }

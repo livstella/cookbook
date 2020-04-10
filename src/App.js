@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from "react";
 import "./styles.css";
+
 import RecipeStyle from "./RecipeStyle"
 
 const fetchData = (recipeURL, setRecipes) => {
   fetch(recipeURL)
     .then(result => result.json())
     .then(finalResult => setRecipes(finalResult))
-    .catch(error => console.log(error));
+
+
+    .catch(error => alert("Error", error));
+  //move to a separate "helpers" file (keep functions out of the APP component)?
+  //a promise is an js object, that works with asynchronous code
+  //which may be pending, successfully fetched (you get the result) or it can fail (which error catches account for)
+
 
 };
 
@@ -17,7 +24,9 @@ export default function App() {
   function deleteFunction(index) {
     setRecipes(recipes.recipes.filter((element, filterIndex) => filterIndex !== index));
   }
+
     
+
   useEffect(() => {
     fetchData(recipeURL, setRecipes);
   }, []);
@@ -25,6 +34,7 @@ export default function App() {
   const recipeItems = recipes
     ? recipes.recipes.map((element, index) => {
         return (
+
           <div>
             <RecipeStyle 
             key={index}
@@ -34,6 +44,8 @@ export default function App() {
             deletR={() => deleteFunction(index)}
             creditsText={element.creditsText}
           />
+
+
           </div>
         );
       })
@@ -41,6 +53,7 @@ export default function App() {
 
   return (
     <div className="App">
+
       <nav class="navbar navbar-light bg-light">
         <span class="navbar-brand mb-0 h1">Recipe List</span>
         <button class="btn btn-outline-success my-2 my-sm-0" onClick={() => fetchData(recipeURL, setRecipes)}>Fetch Data</button>
@@ -56,3 +69,4 @@ export default function App() {
 () => console.log(recipes.recipes[index])
 
 */
+
