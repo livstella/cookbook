@@ -2,9 +2,7 @@ body {
   background-color: #f0eaea;
 }
 
-.body {
-  display: flex;
-}
+
 h3,
 h4,
 h5,
@@ -18,20 +16,9 @@ h3 {
 a {
   color: rgb(57, 52, 36);
 }
-/*img {
-  max-width: 70vw;
-  height: 30vw;
-  display: flex;
-  padding: 0px 20px 20px 20px;
-}
 
-.card-title {
-  text-align: center;
-}
-.card-deck {
-  margin: 20px;
-}
-*/
+
+
 
 .card {
   background-color: #f4f4f4;
@@ -42,10 +29,15 @@ a {
 }
 .recipeWrapper{
   display: flex;
+  justify-content: center;
 }
 
 button {
   color: #a3a3a7;
+}
+.delete-button{
+  align-self: flex-end;
+
 }
 
 .list-group-item {
@@ -54,6 +46,3 @@ button {
   text-align: center;
 }
 
-.nav-link {
-  margin: 0px 10px 0px 10px;
-}

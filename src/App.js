@@ -11,7 +11,7 @@ const fetchData = (recipeURL, setRecipes) => {
 };
 
 export default function App() {
-  const recipeURL = "https://api.spoonacular.com/recipes/random?apiKey=4075a91c4cec4364a6a65681a3cac3dd&number=3&number=3&tag=vegan";
+  const recipeURL = "https://api.spoonacular.com/recipes/random?apiKey=7bd8808bacc941f5b6d18386bdfb02ad&number=3&number=3&tag=vegan";
   const [recipes, setRecipes] = useState();
 
   function deleteFunction(index) {
@@ -31,7 +31,8 @@ export default function App() {
             title={element.title}
             recipeURL={element.sourceUrl}
             imgSrc={element.image}
-            deletR={deleteFunction}
+            deletR={() => deleteFunction(index)}
+            creditsText={element.creditsText}
           />
           </div>
         );
@@ -40,10 +41,11 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Recipe List</h1>
-      <button onClick={() => fetchData(recipeURL, setRecipes)}>
-        Fetch Data
-      </button>
+      <nav class="navbar navbar-light bg-light">
+        <span class="navbar-brand mb-0 h1">Recipe List</span>
+        <button class="btn btn-outline-success my-2 my-sm-0" onClick={() => fetchData(recipeURL, setRecipes)}>Fetch Data</button>
+      </nav>
+  
       <br />{" "}
       <div class="recipeWrapper">{recipeItems}</div>
 
