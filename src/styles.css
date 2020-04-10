@@ -18,12 +18,10 @@ a {
 }
 
 
-
-
 .card {
   background-color: #f4f4f4;
   width: 30vw;
-  min-height: 600px;
+  min-height: 700px;
   margin: 10px;
  
 }

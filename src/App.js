@@ -11,12 +11,15 @@ const fetchData = (recipeURL, setRecipes) => {
 };
 
 export default function App() {
-  const recipeURL = "https://api.spoonacular.com/recipes/random?apiKey=7bd8808bacc941f5b6d18386bdfb02ad&number=3&number=3&tag=vegan";
+  const recipeURL = "https://api.spoonacular.com/recipes/random?apiKey=96c75f90d9c9441286b0d206d58551c0&number=3&number=3&tag=vegan";
   const [recipes, setRecipes] = useState();
+  const [deleteRecipe, setDeleteRecipe] = useState();
 
   function deleteFunction(index) {
-    setRecipes(recipes.recipes.filter((element, filterIndex) => filterIndex !== index));
+    setDeleteRecipe(recipes.recipes.splice(index, 1));
   }
+
+
     
   useEffect(() => {
     fetchData(recipeURL, setRecipes);
@@ -27,12 +30,13 @@ export default function App() {
         return (
           <div>
             <RecipeStyle 
-            key={index}
-            title={element.title}
-            recipeURL={element.sourceUrl}
-            imgSrc={element.image}
-            deletR={() => deleteFunction(index)}
-            creditsText={element.creditsText}
+              key={index}
+              title={element.title}
+              recipeURL={element.sourceUrl}
+              imgSrc={element.image}
+              deleteR={deleteFunction}
+              creditsText={element.creditsText}
+              
           />
           </div>
         );
@@ -41,18 +45,15 @@ export default function App() {
 
   return (
     <div className="App">
-      <nav class="navbar navbar-light bg-light">
-        <span class="navbar-brand mb-0 h1">Recipe List</span>
-        <button class="btn btn-outline-success my-2 my-sm-0" onClick={() => fetchData(recipeURL, setRecipes)}>Fetch Data</button>
+      <nav className="navbar navbar-light bg-light">
+        <span className="navbar-brand mb-0 h1">Recipe List</span>
+        <button className="btn btn-outline-success my-2 my-sm-0" onClick={() => fetchData(recipeURL, setRecipes)}>Fetch Data</button>
       </nav>
   
       <br />{" "}
-      <div class="recipeWrapper">{recipeItems}</div>
+      <div className="recipeWrapper">{recipeItems}</div>
 
     </div>
   );
-}
-/*setRecipes((recipes.recipes = ""))
-() => console.log(recipes.recipes[index])
 
-*/
+}
