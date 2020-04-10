@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles.css";
 
+
 export default function RecipeStyle(props) {
   const { title, recipeUrl, imgSrc, deleteR, creditsText, index} = props;
   return (
@@ -15,6 +16,7 @@ export default function RecipeStyle(props) {
               onClick={()=>deleteR(index)}> 
               Delete this recipe
           </button>
+
       </div>
     </div>
   );
