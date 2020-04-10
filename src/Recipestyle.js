@@ -1,20 +1,22 @@
 import React from "react";
 import "./styles.css";
 
-export default function Recipestyle(props) {
-  const { index, title, recipeUrl, imgSrc, deleter, creditsText } = props;
+
+export default function RecipeStyle(props) {
+  const { title, recipeUrl, imgSrc, deleteR, creditsText, index} = props;
   return (
-    <div class="card">
-      <img src={imgSrc} alt="food img" class="card-img-top" />
-      <div class="card-body">
-        <h2 class="card-title"> {title} </h2>
-        <p>A recipe from {creditsText}</p>
-        <p>
-          <a href="recipeUrl">Go to the recipe for {title}</a>
-        </p>
-        <button class="delete-button" onClick={() => deleter(index)}>
-          Delete a recipe
-        </button>
+    <div className="card">
+        <img src={imgSrc} alt="food img" className="card-img-top"/>
+          <div className="card-body">
+            <h2 className="card-title"> {title} </h2>
+            <p>A recipe from: {creditsText}</p>
+            <p><a href={recipeUrl}>Go to the recipe for {title}</a></p>
+            <button
+              className="delete-button" 
+              onClick={()=>deleteR(index)}> 
+              Delete this recipe
+          </button>
+
       </div>
     </div>
   );
