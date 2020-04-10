@@ -18,8 +18,6 @@ export default function App() {
   function deleteFunction(index) {
     setDeleteRecipe(recipes.recipes.splice(index, 1));
   }
-
-
     
   useEffect(() => {
     fetchData(recipeURL, setRecipes);
@@ -32,11 +30,10 @@ export default function App() {
             <RecipeStyle 
               key={index}
               title={element.title}
-              recipeURL={element.sourceUrl}
+              recipeUrl={element.sourceUrl}
               imgSrc={element.image}
               deleteR={deleteFunction}
-              creditsText={element.creditsText}
-              
+              creditsText={element.creditsText}  
           />
           </div>
         );
@@ -55,5 +52,4 @@ export default function App() {
 
     </div>
   );
-
 }
