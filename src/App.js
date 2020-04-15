@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./styles.css";
 
 import Recipestyle from "./Recipestyle";
+import "./menu-style.css"
 
 const fetchData = (recipeURL, setRecipes) => {
   fetch(recipeURL)
@@ -14,6 +15,7 @@ export default function App() {
 
   const recipeURL = "https://api.spoonacular.com/recipes/random?apiKey=96c75f90d9c9441286b0d206d58551c0&number=3&number=3&tag=vegan";
   const [recipes, setRecipes] = useState();
+  // eslint-disable-next-line
   const [deleteRecipe, setDeleteRecipe] = useState();
 
   function deleteFunction(index) {
@@ -30,7 +32,7 @@ export default function App() {
         return (
           <div>
 
-            <RecipeStyle 
+            <Recipestyle 
               key={index}
               title={element.title}
               recipeUrl={element.sourceUrl}
@@ -47,10 +49,22 @@ export default function App() {
   return (
     <div className="App">
 
-      <nav className="navbar navbar-light bg-light">
+      <nav className="navbar navbar-light bg-light" id="navbar">
         <span className="navbar-brand mb-0 h1">Recipe List</span>
         <button className="btn btn-outline-success my-2 my-sm-0" onClick={() => fetchData(recipeURL, setRecipes)}>Fetch Data</button>
       </nav>
+      <div className="my-menu">
+            <input type="checkbox" id="menu" />
+            <label for="menu"></label>
+            <div className="menu-content">
+                <ul>
+                    <li><a href="https://devhumor.com/">Desserts</a></li>
+                    <li><a href="https://devhumor.com/">Lunch</a></li>
+                    <li><a href="https://devhumor.com/">Breakfast</a></li>
+                </ul>
+            </div>
+        </div>
+      
   
       <br />{" "}
       <div className="recipeWrapper">{recipeItems}</div>

@@ -16,7 +16,9 @@ h3 {
 a {
   color: rgb(57, 52, 36);
 }
-
+#navbar{
+  background-color:red;
+}
 
 .card {
   background-color: #f4f4f4;
