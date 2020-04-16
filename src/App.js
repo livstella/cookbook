@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./styles.css";
+import RecipesData from "./RecipeData";
+import RecipeStyle from "./Recipestyle";
 
-import Recipestyle from "./Recipestyle";
-import "./menu-style.css"
+import "./menu-style.css";
 
-const fetchData = (recipeURL, setRecipes) => {
+/*-const fetchData = (recipeURL, setRecipes) => {
   fetch(recipeURL)
     .then(result => result.json())
     .then(finalResult => setRecipes(finalResult))
@@ -44,31 +45,46 @@ export default function App() {
           </div>
         );
       })
-    : [];
+    : []; */
+
+export default function App() {
+  const recipeItems = RecipesData.map(element => {
+    return (
+      <div>
+        <RecipeStyle
+          key={element.id}
+          title={element.title}
+          imgSrc={element.image}
+          description={element.description}
+          recipeUrl={element.sourceUrl}
+        />
+      </div>
+    );
+  });
 
   return (
     <div className="App">
-
       <nav className="navbar navbar-light bg-light" id="navbar">
         <span className="navbar-brand mb-0 h1">Recipe List</span>
-        <button className="btn btn-outline-success my-2 my-sm-0" onClick={() => fetchData(recipeURL, setRecipes)}>Fetch Data</button>
       </nav>
       <div className="my-menu">
-            <input type="checkbox" id="menu" />
-            <label for="menu"></label>
-            <div className="menu-content">
-                <ul>
-                    <li><a href="https://devhumor.com/">Desserts</a></li>
-                    <li><a href="https://devhumor.com/">Lunch</a></li>
-                    <li><a href="https://devhumor.com/">Breakfast</a></li>
-                </ul>
-            </div>
+        <input type="checkbox" id="menu" />
+        <label for="menu" />
+        <div className="menu-content">
+          <ul>
+            <li>
+              <a href="https://devhumor.com/">Desserts</a>
+            </li>
+            <li>
+              <a href="https://devhumor.com/">Lunch</a>
+            </li>
+            <li>
+              <a href="https://devhumor.com/">Breakfast</a>
+            </li>
+          </ul>
         </div>
-      
-  
-      <br />{" "}
-      <div className="recipeWrapper">{recipeItems}</div>
-
+      </div>
+      <br /> <div className="recipeWrapper">{recipeItems}</div>
     </div>
   );
 }
