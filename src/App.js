@@ -53,6 +53,8 @@ export default function App() {
         <span className="navbar-brand mb-0 h1">Recipe List</span>
         <button className="btn btn-outline-success my-2 my-sm-0" onClick={() => fetchData(recipeURL, setRecipes)}>Fetch Data</button>
       </nav>
+      <div className="my-navbar"><h3>Recipes</h3></div>
+      <div className="layout-wrapper">
       <div className="my-menu">
             <input type="checkbox" id="menu" />
             <label for="menu"></label>
@@ -68,6 +70,7 @@ export default function App() {
   
       <br />{" "}
       <div className="recipeWrapper">{recipeItems}</div>
+      </div>
 
     </div>
   );
