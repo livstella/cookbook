@@ -7,14 +7,15 @@ input#menu{
 .my-menu{
 
     padding: 20px;
-    box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
     max-width: 115px;
-    background-color: #f4f4f4;
+    background-color:rgba(244, 244, 244, 1);
+    margin-top: -120px;
 }
 
 .my-menu ul{
     list-style-type: none;
     padding: 0;
+
 }
 .my-menu li{
 padding-top: 10px;
@@ -33,6 +34,7 @@ padding-top: 10px;
     cursor: pointer;
     background: url(img/closed.png) no-repeat left center;
     padding: 40px 0 40px 80px;
+    font-size: 30px;
 } 
 
 /* Toggle Effect */
@@ -43,7 +45,7 @@ padding-top: 10px;
 }
 
 input:checked ~ .menu-content{
-    max-height: 1000px;
+    max-height: 100%;
     transition: all ease 1s;
 }
 

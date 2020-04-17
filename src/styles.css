@@ -19,7 +19,7 @@ a {
   width: 100%;
   background-color: #f4f4f4;
   box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
-  height: 60px;
+  height: 80px;
 }
 
 .card {
@@ -57,3 +57,6 @@ a {
   text-align: center;
 }
 
+.temp-button{
+  margin-left: 200px;
+}
