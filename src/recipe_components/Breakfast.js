@@ -1,9 +1,9 @@
 import React from "react";
 import RecipeStyle from "./Recipestyle";
-import RecipesData3 from "./RecipeData3";
+import RecipesData2 from "../database/RecipeData2";
 
-export default function Desserts() {
-  const recipeItems3 = RecipesData3.map((element, index) => {
+export default function Breakfast() {
+  const recipeItems2 = RecipesData2.map((element, index) => {
     return (
       <div>
         <RecipeStyle
@@ -16,5 +16,5 @@ export default function Desserts() {
       </div>
     );
   });
-  return <div className="recipeWrapper flex-class">{recipeItems3}</div>;
+  return <div className="recipeWrapper">{recipeItems2}</div>;
 }
