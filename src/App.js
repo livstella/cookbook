@@ -66,15 +66,10 @@ export default function App() {
 
   return (
     <div className="App">
-      <nav className="navbar navbar-light bg-light" id="navbar">
-        <span className="navbar-brand mb-0 h1">Recipe List</span>
-        <button
-          className="btn btn-outline-success my-2 my-sm-0"
-          onClick={() => fetchData(recipeURL, setRecipes)}
-        >
-          Fetch Data
-        </button>
-      </nav>
+
+
+      <div className="my-navbar"> <button className="temp-button" onClick={() => fetchData(recipeURL, setRecipes)}>Fetch Data</button></div>
+      <div className="layout-wrapper">
       <div className="my-menu">
         <input type="checkbox" id="menu" />
         <label for="menu" />
@@ -106,8 +101,14 @@ export default function App() {
             </div>
           </div>
         </div>
+
+      
+  
+      <br />{" "}
+      <div className="recipeWrapper">{recipeItems}</div>
       </div>
-      <br /> <div className="recipeWrapper">{recipeItems}</div>
+
+
     </div>
   );
 }

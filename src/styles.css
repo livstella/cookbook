@@ -15,23 +15,37 @@ h3 {
 a {
   color: rgb(57, 52, 36);
 }
-#navbar {
-  background-color: red;
-}
 
-.card-img-top {
-  height: 300px;
+.my-navbar{
+  width: 100%;
+  background-color: #f4f4f4;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+  height: 80px;
+
 }
 
 .card {
   background-color: #f4f4f4;
+
+  width: 28vw;
+
   min-height: 600px;
   margin: 10px;
+  margin-top: 20px;
   display: flex;
+
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+ 
+
 }
 .recipeWrapper {
   display: flex;
   justify-content: center;
+  margin-left: 10px;
+}
+
+.layout-wrapper{
+  display: flex;
 }
 
 .delete-button {
@@ -46,3 +60,9 @@ a {
   font-size: 1.3em;
   text-align: center;
 }
+
+
+.temp-button{
+  margin-left: 200px;
+}
+
