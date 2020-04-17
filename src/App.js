@@ -5,12 +5,12 @@ import Desserts from "./Desserts.js";
 import Lunch from "./Lunch.js";
 import Tasty_Salad from "./Tasty_Salad";
 import Delicious_Burger from "./Delicious_Burger";
+import RecipesData from "./RecipeData";
+import RecipeStyle from "./Recipestyle";
+import "./menu-style.css";
 import "./styles.css";
 
-import Recipestyle from "./Recipestyle";
-import "./menu-style.css";
-
-const fetchData = (recipeURL, setRecipes) => {
+/*-const fetchData = (recipeURL, setRecipes) => {
   fetch(recipeURL)
     .then(result => result.json())
     .then(finalResult => setRecipes(finalResult))
@@ -47,7 +47,22 @@ export default function App() {
           </div>
         );
       })
-    : [];
+    : []; */
+
+export default function App() {
+  const recipeItems = RecipesData.map(element => {
+    return (
+      <div>
+        <RecipeStyle
+          key={element.id}
+          title={element.title}
+          imgSrc={element.image}
+          description={element.description}
+          recipeUrl={element.sourceUrl}
+        />
+      </div>
+    );
+  });
 
   return (
     <div className="App">
