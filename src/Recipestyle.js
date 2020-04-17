@@ -7,6 +7,7 @@ export default function RecipeStyle(props) {
     <div className="card">
       <img src={imgSrc} alt="food img" className="card-img-top" />
       <div className="card-body">
+
         <h2 className="card-title">
           {" "}
           <a href={recipeUrl}> {title}</a>{" "}
