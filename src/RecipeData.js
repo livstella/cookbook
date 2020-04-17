@@ -27,7 +27,7 @@ const recipesData = [
     sourceUrl: "https://sallysbakingaddiction.com/scones-recipe/",
     description:
       "These better than thebakery treats are flaky, flavorful, and moist with crisp crumbly edges."
-  },
+  }/*,
   {
     id: 4,
     title: "Vegan Quiona Salad",
@@ -55,7 +55,7 @@ const recipesData = [
     sourceUrl: "https://simpleveganblog.com/simple-vegan-jambalaya/",
     description:
       "This simple vegan jambalaya is a super tasty, satisfying and nutritious vegan recipe, and a delicious dinner dish made with beans instead of meat."
-  }
+  }*/
 ];
 
 export default recipesData;
