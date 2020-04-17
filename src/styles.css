@@ -8,6 +8,7 @@ h5,
 h6 {
   font-family: "Open Sans Condensed", sans-serif;
 }
+
 h3 {
   padding-top: 10px;
 }
@@ -16,12 +17,11 @@ a {
   color: rgb(57, 52, 36);
 }
 
-.my-navbar{
+.my-navbar {
   width: 100%;
   background-color: #f4f4f4;
-  box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
   height: 80px;
-
 }
 
 .card {
@@ -32,22 +32,21 @@ a {
   display: flex;
   box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
 }
+
 .card img{
   height: 300px;
   object-fit: cover;
 }
+
 .recipeWrapper {
   display: flex;
   justify-content: center;
   margin-left: 10px;
   margin-top:10px;
-
 }
 
-.layout-wrapper{
+.layout-wrapper {
   display: flex;
-
-  
 }
 
 .list-group-item {
@@ -55,7 +54,3 @@ a {
   font-size: 1.3em;
   text-align: center;
 }
-
-
-
-

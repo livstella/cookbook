@@ -1,13 +1,20 @@
 import React from "react";
-import { Link, Switch, Route } from "react-router-dom";
 import RecipeStyle from "./Recipestyle";
+import RecipesData1 from "./RecipeData1";
 
 export default function Lunch() {
-  return (
-    <div>
+  const recipeItems1 = RecipesData1.map((element, index) => {
+    return (
       <div>
-        <RecipeStyle />
+        <RecipeStyle
+          key={index.id}
+          title={element.title}
+          imgSrc={element.image}
+          description={element.description}
+          recipeUrl={element.sourceUrl}
+        />
       </div>
-    </div>
-  );
+    );
+  });
+  return <div className="recipeWrapper">{recipeItems1}</div>;
 }
