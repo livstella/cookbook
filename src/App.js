@@ -103,9 +103,10 @@ export default function App() {
                   </Switch>
               </div>
             </div>
+
             </div>
           <div className="recipeWrapper">{recipeItems}</div>
         </div>    
-     </div>
+
   );
 }
