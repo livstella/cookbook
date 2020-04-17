@@ -1,27 +1,20 @@
 import React from "react";
-import { Link, Switch, Route } from "react-router-dom";
-import Tasty_Salad from "./Tasty_Salad.js";
-import Delicious_Burger from "./Delicious_Burger.js";
+import RecipeStyle from "./Recipestyle";
+import RecipesData3 from "./RecipeData3";
 
 export default function Desserts() {
-  return (
-    <div>
-      <Link className="link" to="/Tasty_Salad">
-        <Tasty_Salad />
-      </Link>
+  const recipeItems3 = RecipesData3.map((element, index) => {
+    return (
       <div>
-        <Switch>
-          <Route path="/Tasty_Salad" />
-        </Switch>
+        <RecipeStyle
+          key={index.id}
+          title={element.title}
+          imgSrc={element.image}
+          description={element.description}
+          recipeUrl={element.sourceUrl}
+        />
       </div>
-      <Link className="link" to="/Delicious_Burger">
-        <Delicious_Burger />
-      </Link>
-      <div>
-        <Switch>
-          <Route path="/Delicious_Burger" />
-        </Switch>
-      </div>
-    </div>
-  );
+    );
+  });
+  return <div className="recipeWrapper flex-class">{recipeItems3}</div>;
 }

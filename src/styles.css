@@ -16,12 +16,11 @@ a {
   color: rgb(57, 52, 36);
 }
 
-.my-navbar{
+.my-navbar {
   width: 100%;
   background-color: #f4f4f4;
-  box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
   height: 80px;
-
 }
 
 .card {
@@ -34,9 +33,7 @@ a {
   margin-top: 20px;
   display: flex;
 
-  box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
- 
-
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
 }
 .recipeWrapper {
   display: flex;
@@ -44,7 +41,7 @@ a {
   margin-left: 10px;
 }
 
-.layout-wrapper{
+.layout-wrapper {
   display: flex;
 }
 
@@ -61,8 +58,6 @@ a {
   text-align: center;
 }
 
-
-.temp-button{
+.temp-button {
   margin-left: 200px;
 }
-

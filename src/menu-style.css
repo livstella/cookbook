@@ -1,54 +1,50 @@
 /* Menu Styles */
 
-input#menu{
-    display: none;
+input#menu {
+  display: none;
 }
 
-.my-menu{
-
-    padding: 20px;
-    max-width: 115px;
-    background-color:rgba(244, 244, 244, 1);
-    margin-top: -120px;
+.my-menu {
+  padding: 20px;
+  max-width: 115px;
+  background-color: rgba(244, 244, 244, 1);
+  margin-top: -120px;
 }
 
-.my-menu ul{
-    list-style-type: none;
-    padding: 0;
-
+.my-menu ul {
+  list-style-type: none;
+  padding: 0;
 }
-.my-menu li{
-padding-top: 10px;
-
+.my-menu li {
+  padding-top: 10px;
 }
 
-
-.my-menu a{
-    display: block;
-    text-decoration: none;
-    padding: 10px;
+.my-menu a {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
 }
 
-.my-menu label{
-    display: block;
-    cursor: pointer;
-    background: url(img/closed.png) no-repeat left center;
-    padding: 40px 0 40px 80px;
-    font-size: 30px;
-} 
+.my-menu label {
+  display: block;
+  cursor: pointer;
+  background: url(img/closed.png) no-repeat left center;
+  padding: 40px 0 40px 80px;
+  font-size: 30px;
+}
 
 /* Toggle Effect */
 
-.menu-content{
-    max-height: 0;
-    overflow: hidden;
+.menu-content {
+  max-height: 0;
+  overflow: hidden;
 }
 
-input:checked ~ .menu-content{
-    max-height: 100%;
-    transition: all ease 1s;
+input:checked ~ .menu-content {
+  max-height: 100%;
+  transition: all ease 1s;
 }
 
-input:checked ~ label{
-    background: url(img/open.png) no-repeat left center;
+input:checked ~ label {
+  background: url(img/open.png) no-repeat left center;
 }

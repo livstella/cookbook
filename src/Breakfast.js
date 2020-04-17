@@ -1,11 +1,20 @@
 import React from "react";
-import { Link, Switch, Route } from "react-router-dom";
 import RecipeStyle from "./Recipestyle";
+import RecipesData2 from "./RecipeData2";
 
 export default function Breakfast() {
-  return (
-    <div>
-      <RecipeStyle />
-    </div>
-  );
+  const recipeItems2 = RecipesData2.map((element, index) => {
+    return (
+      <div>
+        <RecipeStyle
+          key={index.id}
+          title={element.title}
+          imgSrc={element.image}
+          description={element.description}
+          recipeUrl={element.sourceUrl}
+        />
+      </div>
+    );
+  });
+  return <div className="recipeWrapper">{recipeItems2}</div>;
 }
