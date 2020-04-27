@@ -3,6 +3,7 @@ import { Link, Switch, Route } from "react-router-dom";
 import Desserts from "./recipe_components/Desserts.js";
 import Lunch from "./recipe_components/Lunch.js";
 import Breakfast from "./recipe_components/Breakfast.js";
+import Categories from "./recipe_components/Categories";
 import "./styles.css";
 import "./menu-style.css";
 
@@ -35,6 +36,11 @@ export default function App() {
                   Breakfast
                 </Link>
               </li>
+              <li>
+                <Link className="link" to="/Categories">
+                  Categories
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -49,6 +55,9 @@ export default function App() {
               </Route>
               <Route path="/Breakfast">
                 <Breakfast />
+              </Route>
+              <Route path="/Categories">
+                <Categories />
               </Route>
             </Switch>
           </div>
