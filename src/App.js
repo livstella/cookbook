@@ -9,7 +9,12 @@ import "./menu-style.css";
 export default function App() {
   return (
     <div className="App">
-      <div className="my-navbar"> </div>
+      <div className="my-navbar"> 
+      <form class="form-inline my-2 my-lg-0" id="search-field">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+      </div>
       <div className="layout-wrapper">
         <div className="my-menu">
           <input type="checkbox" id="menu" />

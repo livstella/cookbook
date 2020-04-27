@@ -22,6 +22,12 @@ a {
   background-color: #f4f4f4;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
   height: 80px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#search-field{
+margin-right: 10px;
 }
 
 
