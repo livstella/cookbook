@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import client from '../contentful/index';
 import CategoryCard from "./CategoryCard"
-import SearchResults from "./SearchResults";
 
 
 export default function Categories(){
@@ -18,8 +17,6 @@ export default function Categories(){
     <div>
       
       <h1>Categories</h1>  
-      <p>Search Result Test:</p>
-      <SearchResults/>
 
       
       {data &&
