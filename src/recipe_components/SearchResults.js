@@ -15,7 +15,7 @@ export default function SearchResults(){
     }, []);
  return(
 
- <div> {data && 
+ <div className="category-wrapper"> {data && 
     data.items.map((element, index) => (
         <RecipeStyle
         key={index}
