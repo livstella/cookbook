@@ -38,24 +38,24 @@ export default function RecipeStyle(props) {
             </thead>
             <tbody>
               <tr>
-                <td>{recipeIngredients[0]}</td>
-                <td>{recipeMeasurements[0]}</td>
+                <td>{recipeIngredients}</td>
+                <td>{recipeMeasurements}</td>
               </tr>
               <tr>
-                <td>{recipeIngredients[1]}</td>
-                <td>{recipeMeasurements[1]}</td>
+                <td>{recipeIngredients}</td>
+                <td>{recipeMeasurements}</td>
               </tr>
               <tr>
-                <td>{recipeIngredients[2]}</td>
-                <td>{recipeMeasurements[2]}</td>
+                <td>{recipeIngredients}</td>
+                <td>{recipeMeasurements}</td>
               </tr>
               <tr>
-                <td>{recipeIngredients[3]}</td>
-                <td>{recipeMeasurements[3]}</td>
+                <td>{recipeIngredients}</td>
+                <td>{recipeMeasurements}</td>
               </tr>
               <tr>
-                <td>{recipeIngredients[4]}</td>
-                <td>{recipeMeasurements[4]}</td>
+                <td>{recipeIngredients}</td>
+                <td>{recipeMeasurements}</td>
               </tr>
             </tbody>
           </table>
