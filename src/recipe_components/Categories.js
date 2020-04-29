@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from "react";
-import client from '../contentful/index';
-import CategoryCard from "./CategoryCard"
+import client from "../contentful/index";
+import CategoryCard from "./CategoryCard";
 
-
-export default function Categories(){
-    
+export default function Categories() {
   const [data, setData] = useState("");
-    
-    useEffect(() => {
-      client.getEntries({ content_type: 'categories' }).then((entries) => {
+
+  useEffect(() => {
+    client
+      .getEntries({ content_type: "categories" })
+      .then(entries => {
         setData(entries);
-      });
-    }, []);
+      })
+      .catch(e => console.log(e));
+  }, []);
 
   return (
     <div>
-      
-      <h1>Categories</h1>  
-      
+      <h1>Categories</h1>
+
       {data &&
         data.items.map((element, index) => (
           <CategoryCard
@@ -26,6 +26,7 @@ export default function Categories(){
             imageURL={element.fields.image.fields.file.url}
             catDescription={element.fields.description}
           />
-        ))} 
-    </div>)
+        ))}
+    </div>
+  );
 }
