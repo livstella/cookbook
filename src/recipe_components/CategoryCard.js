@@ -2,8 +2,6 @@ import React from "react";
 import CategoryStyle from "./CategorieStyle.js";
 import "../styles.css";
 
-
-
 export default ({ category, imageURL, catDescription }) => {
   return (
     <div className="card">
@@ -20,4 +18,3 @@ export default ({ category, imageURL, catDescription }) => {
   </div>
   );
 };
-

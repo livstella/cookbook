@@ -26,14 +26,13 @@ a {
   justify-content: space-between;
 }
 
-#search-field{
-margin-right: 10px;
+#search-field {
+  margin-right: 10px;
 }
 #category-link{
   margin-top: 30px;
   margin-left: 250px;
 }
-
 
 .recipeWrapper {
   display: flex;
@@ -93,7 +92,8 @@ margin-right: 10px;
   transform: rotateY(180deg);
 }
 
-.card-front, .card-back {
+.card-front,
+.card-back {
   position: absolute;
   width: 100%;
   height: 100%;

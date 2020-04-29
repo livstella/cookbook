@@ -1,20 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import client from "../contentful/index";
 import RecipeStyle from "./Recipestyle";
-import RecipesData1 from "../database/RecipeData1";
 
-export default function Lunch() {
-  const recipeItems1 = RecipesData1.map((element, index) => {
-    return (
-      <div>
-        <RecipeStyle
-          key={index.id}
-          title={element.title}
-          imgSrc={element.image}
-          description={element.description}
-          recipeUrl={element.sourceUrl}
-        />
-      </div>
-    );
-  });
-  return <div className="recipeWrapper">{recipeItems1}</div>;
+export default function Desserts() {
+  const [data, setData] = useState("");
+
+  useEffect(() => {
+    client
+      .getEntries({ content_type: "meals" })
+      .then(entries => {
+        setData(entries);
+      })
+      .catch(e => console.log(e));
+  }, []);
+
+  return (
+    <div className="recipeWrapper">
+      {data &&
+        data.items.map((element, index) => (
+          <RecipeStyle
+            key={index}
+            title={element.fields.recipeName}
+            imgSrc={element.fields.image.fields.file.url}
+            catDescription={element.fields.description}
+            recipeInstructions={element.fields.instructions}
+            recipeIngredients={element.fields.ingredients}
+            recipeMeasurements={element.fields.measurements}
+          />
+        ))}
+    </div>
+  );
 }
+
