@@ -16,8 +16,8 @@ export default function Categories() {
 
   return (
     <div>
-      <h1>Categories</h1>
-
+      <h1>Categories</h1>  
+      <div className="category-wrapper">
       {data &&
         data.items.map((element, index) => (
           <CategoryCard
@@ -26,7 +26,7 @@ export default function Categories() {
             imageURL={element.fields.image.fields.file.url}
             catDescription={element.fields.description}
           />
-        ))}
-    </div>
-  );
+        ))} 
+        </div>
+    </div>)
 }
