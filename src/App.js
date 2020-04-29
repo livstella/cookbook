@@ -4,6 +4,7 @@ import Desserts from "./recipe_components/Desserts.js";
 import Lunch from "./recipe_components/Lunch.js";
 import Breakfast from "./recipe_components/Breakfast.js";
 import Categories from "./recipe_components/Categories";
+import SearchBar from "./recipe_components/SearchBar";
 import SearchResults from "./recipe_components/SearchResults";
 import "./styles.css";
 import "./menu-style.css";
@@ -15,10 +16,7 @@ export default function App() {
            <Link className="link" to="/Categories">
               <h3 id="category-link">Categories</h3> 
             </Link>
-      <form class="form-inline my-2 my-lg-0" id="search-field">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+           <SearchBar/>
       </div>
       <div className="layout-wrapper">
         <div className="my-menu">
@@ -65,7 +63,6 @@ export default function App() {
               </Route>
             </Switch>
           </div>
-          <SearchResults/>
         </div>
         
       </div>

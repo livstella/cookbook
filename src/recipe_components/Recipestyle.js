@@ -20,14 +20,13 @@ export default function RecipeStyle(props) {
             <h2 className="card-title">
               <a href={recipeUrl}> {title}</a>{" "}
             </h2>
-            <p>{recipeDescription}</p>
+            <p className="recipe-description">{recipeDescription}</p>
             <a href={recipeUrl}>{title} and more recipes </a>
           </div>
         </div>
         <div className="card-back">
           <br />
           <br />
-          <h3>{title}</h3>
           <p>{recipeInstructions}</p>
           <table class="table">
             <thead>
