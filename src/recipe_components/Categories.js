@@ -17,6 +17,7 @@ export default function Categories(){
     <div>
       
       <h1>Categories</h1>  
+
       
       {data &&
         data.items.map((element, index) => (
