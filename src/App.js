@@ -4,6 +4,7 @@ import Desserts from "./recipe_components/Desserts.js";
 import Lunch from "./recipe_components/Lunch.js";
 import Breakfast from "./recipe_components/Breakfast.js";
 import Categories from "./recipe_components/Categories";
+import SearchResults from "./recipe_components/SearchResults";
 import "./styles.css";
 import "./menu-style.css";
 
@@ -64,7 +65,9 @@ export default function App() {
               </Route>
             </Switch>
           </div>
+          <SearchResults/>
         </div>
+        
       </div>
     </div>
   );

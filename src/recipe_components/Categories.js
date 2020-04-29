@@ -1,15 +1,7 @@
 import React, { useState, useEffect } from "react";
+import client from '../contentful/index';
 import CategoryCard from "./CategoryCard"
-var contentful = require('contentful');
 
-const contentfulSpaceId = 'nqclg9tj58dw';
-const contentfulCdApiAccesstoken =
-  'TwaQ7_8Cf1tObLkdCazTWMrUaU-0J-yhwYe_eYNnw98';
-
-var client = contentful.createClient({
-  space: contentfulSpaceId,
-  accessToken: contentfulCdApiAccesstoken,
-});
 
 export default function Categories(){
     
