@@ -1,15 +1,16 @@
 import React from "react";
+import CategoryStyle from "./CategorieStyle.js";
+
 
 
 export default ({ category, imageURL, catDescription }) => {
   return (
-    <div>
-    
-          <h1>{category}</h1>
-          <img src={imageURL}/>
-          <p>{catDescription}</p>
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cook {category}</button>
-       
+    <div >
+        <CategoryStyle
+          category={category}
+          imgURL={imageURL}
+          catDescription={catDescription}
+         />
     </div>
   );
 };

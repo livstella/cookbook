@@ -12,6 +12,9 @@ export default function App() {
   return (
     <div className="App">
       <div className="my-navbar"> 
+           <Link className="link" to="/Categories">
+              <h3 id="category-link">Categories</h3> 
+            </Link>
       <form class="form-inline my-2 my-lg-0" id="search-field">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -22,7 +25,7 @@ export default function App() {
           <input type="checkbox" id="menu" />
           <label htmlFor="menu">
             <Link className="link" to="/">
-              Recipes
+              <h3>Recipes</h3>
             </Link>
           </label>
           <div className="menu-content">
@@ -40,11 +43,6 @@ export default function App() {
               <li>
                 <Link className="link" to="/Breakfast">
                   Breakfast
-                </Link>
-              </li>
-              <li>
-                <Link className="link" to="/Categories">
-                  Categories
                 </Link>
               </li>
             </ul>
