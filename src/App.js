@@ -65,7 +65,6 @@ export default function App() {
               </Route>
             </Switch>
           </div>
-          <SearchResults/>
         </div>
         
       </div>
