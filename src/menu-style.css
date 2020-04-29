@@ -8,7 +8,7 @@ input#menu {
   padding: 20px;
   max-width: 115px;
   background-color: rgba(244, 244, 244, 1);
-  margin-top: -120px;
+  margin-top: -130px;
 }
 
 .my-menu ul {
@@ -32,6 +32,7 @@ input#menu {
   background: url(img/closed.png) no-repeat left center;
   padding: 40px 0 40px 80px;
   font-size: 30px;
+
 }
 
 /* Toggle Effect */
@@ -48,4 +49,38 @@ input:checked ~ .menu-content {
 
 input:checked ~ label {
   background: url(img/open.png) no-repeat left center;
+}
+
+
+@media screen and (max-width: 400px) {
+   .my-menu {
+    padding: 20px;
+    max-width: 115px;
+    margin-top: -135px;
+    background-color: rgba(244, 244, 244, 0);
+  }
+  .menu-content {
+    margin-top: -45px;
+    margin-left: -20px;
+  }
+  .my-menu li {
+    font-size: 7vw;
+  }
+
+  .my-menu label {
+    padding: 40px 0 40px 70px;
+  }
+  input:checked ~ .menu-content {
+    background-color: rgba(244, 244, 244, 1);
+    display: show;
+    position:absolute;
+    z-index: 4;  
+  }
+
+  #search-field {
+    display: none;
+  }
+
+
+  
 }
