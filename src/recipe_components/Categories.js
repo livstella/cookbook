@@ -23,9 +23,8 @@ export default function Categories(){
 
   return (
     <div>
-      
       <h1>Categories</h1>  
-      
+      <div className="category-wrapper">
       {data &&
         data.items.map((element, index) => (
           <CategoryCard
@@ -35,5 +34,6 @@ export default function Categories(){
             catDescription={element.fields.description}
           />
         ))} 
+        </div>
     </div>)
 }
