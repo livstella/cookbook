@@ -36,26 +36,20 @@ export default function RecipeStyle(props) {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>{recipeIngredients}</td>
-                <td>{recipeMeasurements}</td>
+              <td>{recipeIngredients ? recipeIngredients.map((ingredients, index) =>{
+                return(
+                  <tr>
+                <td>{ingredients}</td>
               </tr>
-              <tr>
-                <td>{recipeIngredients}</td>
-                <td>{recipeMeasurements}</td>
+                )
+              }) : null}</td> 
+              <td>{recipeMeasurements ? recipeMeasurements.map((measurements, index) =>{
+                return(
+                  <tr>
+                <td>{measurements}</td>
               </tr>
-              <tr>
-                <td>{recipeIngredients}</td>
-                <td>{recipeMeasurements}</td>
-              </tr>
-              <tr>
-                <td>{recipeIngredients}</td>
-                <td>{recipeMeasurements}</td>
-              </tr>
-              <tr>
-                <td>{recipeIngredients}</td>
-                <td>{recipeMeasurements}</td>
-              </tr>
+                )
+              }) : null}</td> 
             </tbody>
           </table>
         </div>

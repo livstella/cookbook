@@ -7,13 +7,13 @@ export default function Desserts() {
 
   useEffect(() => {
     client
-      .getEntries({ content_type: "meals" })
+      .getEntries({ content_type: "meals", 'fields.category[match]': 'Dessert' })
       .then(entries => {
         setData(entries);
       })
       .catch(e => console.log(e));
   }, []);
-
+  
   return (
     <div className="recipeWrapper">
       {data &&
