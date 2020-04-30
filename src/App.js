@@ -6,6 +6,8 @@ import Breakfast from "./recipe_components/Breakfast.js";
 import Categories from "./recipe_components/Categories";
 import SearchBar from "./recipe_components/SearchBar";
 import SearchResults from "./recipe_components/SearchResults";
+import Vegan from "./recipe_components/Vegan";
+
 import "./styles.css";
 import "./menu-style.css";
 
@@ -43,6 +45,11 @@ export default function App() {
                   Breakfast
                 </Link>
               </li>
+              <li>
+                <Link className="link" to="/Vegan">
+                  Vegan
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -57,6 +64,9 @@ export default function App() {
               </Route>
               <Route path="/Breakfast">
                 <Breakfast />
+              </Route>
+              <Route path="/Vegan">
+                <Vegan />
               </Route>
               <Route path="/Categories">
                 <Categories />

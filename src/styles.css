@@ -147,3 +147,31 @@ a {
  
   
 }
+
+
+.recipe{
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: white;
+  align-items: center;
+  min-width: 40%;
+  }
+  
+.title{
+  text-align: center;
+}
+.name{
+  text-align: center;
+}
+
+.recipeWrapper1 {
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  width: fit-content;
+}
