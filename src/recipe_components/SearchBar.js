@@ -29,15 +29,13 @@ export default function SearchBar() {
         />  
       ))} 
       
-     </div></div>)
-  }
-
-<<<<<<< Updated upstream
-  <form className="form-inline my-2 my-lg-0" id="search-field">
+     </div> <form className="form-inline my-2 my-lg-0" id="search-field">
     <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
     <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
-=======
+  </form></div>)
+  }
+
+
   function makeApiCall(searchInput){
     client.getEntries({ 'query': searchInput,
     content_type: 'meals' }).then((entries) => {
@@ -74,7 +72,6 @@ return(
       
      </div>
   </div>
->>>>>>> Stashed changes
 
 )
 

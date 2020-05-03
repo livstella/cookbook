@@ -6,6 +6,7 @@ import Vegan from "./recipe_components/Vegan.js";
 import Breakfast from "./recipe_components/Breakfast.js";
 import Categories from "./recipe_components/Categories";
 import SearchBar from "./recipe_components/SearchBar";
+// import Konami from 'react-konami-code';
 // import SearchResults from "./recipe_components/SearchResults";
 import "./styles.css";
 import "./menu-style.css";
