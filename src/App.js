@@ -6,11 +6,12 @@ import Vegan from "./recipe_components/Vegan.js";
 import Breakfast from "./recipe_components/Breakfast.js";
 import Categories from "./recipe_components/Categories";
 import SearchBar from "./recipe_components/SearchBar";
-// import Konami from 'react-konami-code';
+import Konami from 'react-konami-code';
 // import SearchResults from "./recipe_components/SearchResults";
 import "./styles.css";
 import "./menu-style.css";
 import FrontPage from "./FrontPage.js";
+import Rickroll from "./recipe_components/Rickroll.js";
 
 export default function App() {
   return (
@@ -53,6 +54,9 @@ export default function App() {
           </div>
         </div>
         <div className="recipeWrapper">
+        <Konami code={[82,73,67,75]} >
+                    <Rickroll/>
+                </Konami>
           <div>
             <Switch>
               <Route path="/Desserts">
