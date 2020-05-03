@@ -3,16 +3,7 @@ import client from '../contentful/index';
 import RecipeStyle from "./Recipestyle";
 
 export default function SearchResults(){
-    const searchTerm = 'chicken'
-
-    const [data, setData] = useState("");
-    
-    useEffect(() => {
-      client.getEntries({ 'query': searchTerm }).then((entries) => {
-        setData(entries);
-      })
-      .catch(e => console.log("Error"))
-    }, []);
+   
  return(
 
  <div className="category-wrapper"> {data && 

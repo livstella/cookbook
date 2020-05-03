@@ -11,7 +11,7 @@ export default ({ category, imageURL, catDescription }) => {
             {category}
           </h2>
           <p>{catDescription}</p>
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cook {category}</button>
+          <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Cook {category}</button>
         </div>
       </div>
   </div>
