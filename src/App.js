@@ -5,6 +5,7 @@ import Lunch from "./recipe_components/Lunch.js";
 import Vegan from "./recipe_components/Vegan.js";
 import Breakfast from "./recipe_components/Breakfast.js";
 import Categories from "./recipe_components/Categories";
+import RecipeByCategory from "./recipe_components/RecipeByCategory";
 import SearchBar from "./recipe_components/SearchBar";
 import Konami from 'react-konami-code';
 // import SearchResults from "./recipe_components/SearchResults";
@@ -17,7 +18,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="my-navbar"> 
-           <Link className="link" to="/Categories">
+           <Link className="link" to="/categories">
               <h3 id="category-link">Categories</h3> 
             </Link>
             <SearchBar/>
@@ -68,16 +69,19 @@ export default function App() {
               <Route path="/Breakfast">
                 <Breakfast />
               </Route>
-              <Route path="/Categories">
-                <Categories />
-              </Route>
-
               <Route path="/Vegan">
                 <Vegan />
                   </Route>    
-              <Route path="/">
+              <Route exact path="/">
                 <FrontPage />
               </Route>
+              <Route exact path="/categories/">
+                <Categories />
+              </Route>
+            
+              <Route exact path="/categories/:category" children={<RecipeByCategory/>} >
+              </Route>
+      
             </Switch>
           </div>
         </div>

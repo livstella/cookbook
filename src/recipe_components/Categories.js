@@ -26,7 +26,7 @@ export default function Categories() {
             imageURL={element.fields.image.fields.file.url}
             catDescription={element.fields.description}
           />
-        ))} 
+        ))}; 
         </div>
     </div>)
 }
