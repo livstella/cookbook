@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles.css";
 
 export default ({ category, imageURL, catDescription }) => {
@@ -11,7 +12,10 @@ export default ({ category, imageURL, catDescription }) => {
             {category}
           </h2>
           <p>{catDescription}</p>
-          <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Cook {category}</button>
+          <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
+            <Link className="link" to="/RecipeByCategory">
+              Cook {category}
+            </Link></button>
         </div>
       </div>
   </div>

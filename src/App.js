@@ -5,6 +5,7 @@ import Lunch from "./recipe_components/Lunch.js";
 import Vegan from "./recipe_components/Vegan.js";
 import Breakfast from "./recipe_components/Breakfast.js";
 import Categories from "./recipe_components/Categories";
+import RecipeByCategory from "./recipe_components/RecipeByCategory";
 import SearchBar from "./recipe_components/SearchBar";
 // import Konami from 'react-konami-code';
 // import SearchResults from "./recipe_components/SearchResults";
@@ -67,12 +68,14 @@ export default function App() {
               <Route path="/Categories">
                 <Categories />
               </Route>
-
               <Route path="/Vegan">
                 <Vegan />
                   </Route>    
               <Route path="/">
                 <FrontPage />
+              </Route>
+              <Route path="/RecipeByCategory/:category">
+                <RecipeByCategory />
               </Route>
             </Switch>
           </div>
