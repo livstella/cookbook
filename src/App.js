@@ -6,7 +6,7 @@ import Vegan from "./recipe_components/Vegan.js";
 import Breakfast from "./recipe_components/Breakfast.js";
 import Categories from "./recipe_components/Categories";
 import SearchBar from "./recipe_components/SearchBar";
-import SearchResults from "./recipe_components/SearchResults";
+// import SearchResults from "./recipe_components/SearchResults";
 import "./styles.css";
 import "./menu-style.css";
 import FrontPage from "./FrontPage.js";
@@ -18,7 +18,7 @@ export default function App() {
            <Link className="link" to="/Categories">
               <h3 id="category-link">Categories</h3> 
             </Link>
-           <SearchBar/>
+            <SearchBar/>
       </div>
       <div className="layout-wrapper">
         <div className="my-menu">
