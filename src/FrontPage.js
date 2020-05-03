@@ -15,7 +15,7 @@ export default()=>{
                 <img class="card-img-top" id="firstImg"src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fih1.redbubble.net%2Fimage.30416963.4324%2Fsticker%2C375x360.u7.png&f=1&nofb=1" alt="Card image cap"/>
                 <div class="card-body">
                 <h5 class="card-title">CSS is awesome</h5>
-                <p class="card-text">How much we can do with CSS and how straight forward forward it is.</p>
+                <p class="card-text">How much we can do with CSS and how straight forward it is.</p>
                 </div>
             </div>
 
