@@ -13,8 +13,6 @@ export default function Desserts() {
       })
       .catch(e => console.log(e));
   }, []);
-  console.log(RecipeStyle)
-
   
   return (
     <div className="recipeWrapper">
