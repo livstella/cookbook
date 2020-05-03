@@ -28,7 +28,7 @@ export default function RecipeStyle(props) {
           <br />
           <br />
           <p>{recipeInstructions}</p>
-          <table class="table">
+          <table className="table">
             <thead>
               <tr>
                 <th scope="col">Ingredients</th>

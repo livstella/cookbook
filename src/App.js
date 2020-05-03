@@ -2,6 +2,7 @@ import React from "react";
 import { Link, Switch, Route } from "react-router-dom";
 import Desserts from "./recipe_components/Desserts.js";
 import Lunch from "./recipe_components/Lunch.js";
+import Vegan from "./recipe_components/Vegan.js";
 import Breakfast from "./recipe_components/Breakfast.js";
 import Categories from "./recipe_components/Categories";
 import SearchBar from "./recipe_components/SearchBar";
@@ -42,6 +43,9 @@ export default function App() {
                 <Link className="link" to="/Breakfast">
                   Breakfast
                 </Link>
+                <Link className="link" to="/Vegan">
+                  Vegan
+                </Link>
               </li>
             </ul>
           </div>
@@ -60,6 +64,9 @@ export default function App() {
               </Route>
               <Route path="/Categories">
                 <Categories />
+              </Route>
+              <Route path="/Vegan">
+                <Vegan />
               </Route>
             </Switch>
           </div>
