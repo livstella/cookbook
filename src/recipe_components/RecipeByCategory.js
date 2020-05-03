@@ -1,13 +1,23 @@
 import React, { useState, useEffect } from "react";
 import client from "../contentful/index";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useParams
+} from "react-router-dom";
 import RecipeStyle from "./Recipestyle";
+
+
 
 export default function RecipeByCategory () {
   const [data, setData] = useState("");
+  let {category} = useParams();
 
   useEffect(() => {
     client
-      .getEntries({ content_type: "meals" })
+      .getEntries({ content_type: "meals", 'fields.category[match]': category})
       .then(entries => {
         setData(entries);
       })
@@ -16,6 +26,7 @@ export default function RecipeByCategory () {
 
   return (
     <div className="recipeWrapper">
+      <div><h1>Let's cook some {category}</h1><hr/></div>
       {data && 
         data.items.map((element, index) => (
           <RecipeStyle
@@ -30,5 +41,5 @@ export default function RecipeByCategory () {
         ))};
     </div>
   )
-
+ 
 };

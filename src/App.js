@@ -17,7 +17,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="my-navbar"> 
-           <Link className="link" to="/Categories">
+           <Link className="link" to="/categories">
               <h3 id="category-link">Categories</h3> 
             </Link>
             <SearchBar/>
@@ -65,18 +65,19 @@ export default function App() {
               <Route path="/Breakfast">
                 <Breakfast />
               </Route>
-              <Route path="/Categories">
-                <Categories />
-              </Route>
               <Route path="/Vegan">
                 <Vegan />
                   </Route>    
-              <Route path="/">
+              <Route exact path="/">
                 <FrontPage />
               </Route>
-              <Route path="/RecipeByCategory/:category">
-                <RecipeByCategory />
+              <Route exact path="/categories/">
+                <Categories />
               </Route>
+            
+              <Route exact path="/categories/:category" children={<RecipeByCategory/>} >
+              </Route>
+      
             </Switch>
           </div>
         </div>
