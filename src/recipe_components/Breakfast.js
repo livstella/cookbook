@@ -27,7 +27,7 @@ export default function Desserts() {
             recipeIngredients={element.fields.ingredients}
             recipeMeasurements={element.fields.measurements}
           />
-        ))}
+        ))};
     </div>
   );
 }
