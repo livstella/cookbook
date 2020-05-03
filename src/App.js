@@ -8,6 +8,7 @@ import SearchBar from "./recipe_components/SearchBar";
 import SearchResults from "./recipe_components/SearchResults";
 import "./styles.css";
 import "./menu-style.css";
+import FrontPage from "./FrontPage.js";
 
 export default function App() {
   return (
@@ -60,6 +61,9 @@ export default function App() {
               </Route>
               <Route path="/Categories">
                 <Categories />
+              </Route>
+              <Route path="/">
+                <FrontPage />
               </Route>
             </Switch>
           </div>

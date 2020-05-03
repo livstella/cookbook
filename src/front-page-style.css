@@ -1,0 +1,40 @@
+
+.front-page-wrapper{
+    display:flex;
+    padding: 10px;
+}
+
+.front-page-wrapper{
+    margin:10px;
+}
+
+.front-text{
+    margin-left: 20px;
+    text-align: center;
+    padding: 20px;
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(5, 5, 5, 0.79);
+}
+h5{
+    color: rgba(5, 5, 5, 0.64);
+
+}
+.card-img-top{
+    height: 300px;
+    object-fit: cover;
+}
+
+.front-card{
+    width: 28vw;
+    margin-left: -10px;
+}
+#img-three{
+    width: 35vw;
+}
+
+hr{
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
