@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from "react";
 import client from "../contentful/index";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams
-} from "react-router-dom";
+import { BrowserRouter as Router, useParams } from "react-router-dom";
 import RecipeStyle from "./Recipestyle";
 
 export default function RecipeByCategory() {

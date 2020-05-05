@@ -126,13 +126,13 @@ padding: 5px;
 
 .rick {
   border: 1px solid black;
-  border-radius:  5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
   vertical-align: center;
   padding: 30px;
 }
 
 @media screen and (max-width: 1325px) {
-  .card img{
+  .card img {
     height: 200px;
     object-fit: cover;
   }
