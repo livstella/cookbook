@@ -74,7 +74,7 @@ input:checked ~ label {
   input:checked ~ .menu-content {
     background-color: rgba(244, 244, 244, 1);
     display: show;
-    position:absolute;
+    position: absolute;
     z-index: 4;  
   }
 

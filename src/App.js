@@ -57,9 +57,9 @@ export default function App() {
           </div>
         </div>
         <div className="recipeWrapper">
-        <Konami code={[82,73,67,75]} >
-                    <Rickroll/>
-                </Konami>
+          <Konami code={[82, 73, 67, 75]} >
+            <Rickroll />
+          </Konami>
           <div>
             <Switch>
               <Route path="/Desserts">
