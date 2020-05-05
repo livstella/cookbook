@@ -9,15 +9,13 @@ import {
 } from "react-router-dom";
 import RecipeStyle from "./Recipestyle";
 
-
-
-export default function RecipeByCategory () {
+export default function RecipeByCategory() {
   const [data, setData] = useState("");
-  let {category} = useParams();
+  let { category } = useParams();
 
   useEffect(() => {
     client
-      .getEntries({ content_type: "meals", 'fields.category[match]': category})
+      .getEntries({ content_type: "meals", "fields.category[match]": category })
       .then(entries => {
         setData(entries);
       })
@@ -26,8 +24,8 @@ export default function RecipeByCategory () {
 
   return (
     <div className="recipeWrapper">
-      <div><h1>Let's cook some {category}</h1><hr/></div>
-      {data && 
+      <div><h1>Let's cook some {category}</h1><hr /></div>
+      {data &&
         data.items.map((element, index) => (
           <RecipeStyle
             key={index}
@@ -38,8 +36,7 @@ export default function RecipeByCategory () {
             recipeIngredients={element.fields.ingredients}
             recipeMeasurements={element.fields.measurements}
           />
-        ))};
+        ))}
     </div>
-  )
- 
+  );
 };

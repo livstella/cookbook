@@ -17,10 +17,11 @@
     margin-right: auto;
     color: rgba(5, 5, 5, 0.79);
 }
+
 h5{
     color: rgba(5, 5, 5, 0.64);
-
 }
+
 .card-img-top{
     height: 300px;
     object-fit: cover;
@@ -30,6 +31,7 @@ h5{
     width: 28vw;
     margin-left: -10px;
 }
+
 #img-three{
     width: 35vw;
 }

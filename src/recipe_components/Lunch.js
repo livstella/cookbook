@@ -7,7 +7,7 @@ export default function Desserts() {
 
   useEffect(() => {
     client
-      .getEntries({ content_type: "meals", 'fields.category[match]': 'Lunch' })
+      .getEntries({ content_type: "meals", "fields.category[match]": "Lunch" })
       .then(entries => {
         setData(entries);
       })
@@ -27,8 +27,8 @@ export default function Desserts() {
             recipeIngredients={element.fields.ingredients}
             recipeMeasurements={element.fields.measurements}
           />
-        ))};
+        ))}
     </div>
   );
-}
+};
 
