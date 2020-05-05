@@ -28,9 +28,14 @@ a {
 
 #search-field {
   margin-right: 10px;
+  padding-top: 20px;
 }
 
-#category-link{
+.searchbar-wrapper {
+padding: 5px;
+}
+
+#category-link {
   margin-top: 22px;
   margin-left: 250px;
 }
@@ -53,7 +58,7 @@ a {
   justify-content: space-around;
 }
 
-.category-wrapper{
+.category-wrapper {
   display: flex;
   margin-left: 10px;
   margin-top: 10px;
@@ -111,12 +116,19 @@ a {
   padding: 50px;
 }
 
-.card-title{
+.card-title {
     font-size: 2vw;
 }
 
-.recipe-description{
+.recipe-description {
    font-size: 1.5vw;
+}
+
+.rick {
+  border: 1px solid black;
+  border-radius:  5px 5px 5px 5px;
+  vertical-align: center;
+  padding: 30px;
 }
 
 @media screen and (max-width: 1325px) {
@@ -128,22 +140,22 @@ a {
 }
 
 @media screen and (max-width: 400px) {
-  .card{
+  .card {
    width: 80vw;
    margin-left: -90px;
    min-height: 500px ;
   }
 
-  .card img{
+  .card img {
     height: 300px;
     object-fit: cover;
   }
 
-  .card-title{
+  .card-title {
     font-size: 6vw;
   }
 
-#category-link{
+#category-link {
   margin-left: 220px;
   margin-top: 17px;
   }
