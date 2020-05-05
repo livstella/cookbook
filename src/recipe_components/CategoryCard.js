@@ -6,7 +6,7 @@ export default ({ category, imageURL, catDescription }) => {
 
   return (
     <div className="card">
-    <div className="card-front">
+      <div className="card-front">
         <img src={imageURL} alt="Category img" className="card-img-top" />
         <div className="card-body">
           <h2 className="card-title">
@@ -20,6 +20,6 @@ export default ({ category, imageURL, catDescription }) => {
           </button>
         </div>
       </div>
-  </div>
+    </div>
   );
 };

@@ -7,7 +7,7 @@ import Breakfast from "./recipe_components/Breakfast.js";
 import Categories from "./recipe_components/Categories";
 import RecipeByCategory from "./recipe_components/RecipeByCategory";
 import SearchBar from "./recipe_components/SearchBar";
-// import Konami from 'react-konami-code';
+// import Konami from "react-konami-code";
 // import SearchResults from "./recipe_components/SearchResults";
 import "./styles.css";
 import "./menu-style.css";
@@ -16,11 +16,11 @@ import FrontPage from "./FrontPage.js";
 export default function App() {
   return (
     <div className="App">
-      <div className="my-navbar"> 
-           <Link className="link" to="/categories">
-              <h3 id="category-link">Categories</h3> 
-            </Link>
-            <SearchBar/>
+      <div className="my-navbar">
+        <Link className="link" to="/categories">
+          <h3 id="category-link">Categories</h3>
+        </Link>
+        <SearchBar />
       </div>
       <div className="layout-wrapper">
         <div className="my-menu">
@@ -46,6 +46,8 @@ export default function App() {
                 <Link className="link" to="/Breakfast">
                   Breakfast
                 </Link>
+              </li>
+              <li>
                 <Link className="link" to="/Vegan">
                   Vegan
                 </Link>
@@ -67,22 +69,19 @@ export default function App() {
               </Route>
               <Route path="/Vegan">
                 <Vegan />
-                  </Route>    
+              </Route>
               <Route exact path="/">
                 <FrontPage />
               </Route>
               <Route exact path="/categories/">
                 <Categories />
               </Route>
-            
-              <Route exact path="/categories/:category" children={<RecipeByCategory/>} >
+              <Route exact path="/categories/:category" children={<RecipeByCategory />} >
               </Route>
-      
             </Switch>
           </div>
         </div>
-        
       </div>
     </div>
   );
-}
+};

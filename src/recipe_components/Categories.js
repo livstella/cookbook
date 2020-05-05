@@ -16,17 +16,18 @@ export default function Categories() {
 
   return (
     <div>
-      <h1>Categories</h1>  
+      <h1>Categories</h1>
       <div className="category-wrapper">
-      {data &&
-        data.items.map((element, index) => (
-          <CategoryCard
-            key={index}
-            category={element.fields.categoryName}
-            imageURL={element.fields.image.fields.file.url}
-            catDescription={element.fields.description}
-          />
-        ))}; 
-        </div>
-    </div>)
-}
+        {data &&
+          data.items.map((element, index) => (
+            <CategoryCard
+              key={index}
+              category={element.fields.categoryName}
+              imageURL={element.fields.image.fields.file.url}
+              catDescription={element.fields.description}
+            />
+          ))}
+      </div>
+    </div>
+  );
+};

@@ -11,6 +11,7 @@ export default function RecipeStyle(props) {
     recipeIngredients,
     recipeMeasurements
   } = props;
+
   return (
     <div className="card">
       <div className="card-inner">
@@ -36,24 +37,24 @@ export default function RecipeStyle(props) {
               </tr>
             </thead>
             <tbody>
-              <td>{recipeIngredients ? recipeIngredients.map((ingredients, index) =>{
-                return(
+              <td>{recipeIngredients ? recipeIngredients.map((ingredients, index) => {
+                return (
                   <tr>
-                <td>{ingredients}</td>
-              </tr>
+                    <td>{ingredients}</td>
+                  </tr>
                 )
-              }) : null}</td> 
-              <td>{recipeMeasurements ? recipeMeasurements.map((measurements, index) =>{
-                return(
+              }) : null}</td>
+              <td>{recipeMeasurements ? recipeMeasurements.map((measurements, index) => {
+                return (
                   <tr>
-                <td>{measurements}</td>
-              </tr>
+                    <td>{measurements}</td>
+                  </tr>
                 )
-              }) : null}</td> 
+              }) : null}</td>
             </tbody>
           </table>
         </div>
       </div>
     </div>
   );
-}
+};

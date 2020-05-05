@@ -1,6 +1,7 @@
 body {
   background-color: #f0eaea;
 }
+
 h3,
 h4,
 h5,
@@ -28,6 +29,7 @@ a {
 #search-field {
   margin-right: 10px;
 }
+
 #category-link{
   margin-top: 22px;
   margin-left: 250px;
@@ -70,8 +72,7 @@ a {
   display: flex;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
   perspective: 1000px;
-  overflow: scroll;
-  
+  overflow: scroll;  
 }
 
 .card img {
@@ -113,6 +114,7 @@ a {
 .card-title{
     font-size: 2vw;
 }
+
 .recipe-description{
    font-size: 1.5vw;
 }
@@ -125,24 +127,25 @@ a {
 
 }
 
-
 @media screen and (max-width: 400px) {
   .card{
    width: 80vw;
    margin-left: -90px;
    min-height: 500px ;
   }
+
   .card img{
     height: 300px;
     object-fit: cover;
   }
+
   .card-title{
     font-size: 6vw;
-}
+  }
+
 #category-link{
   margin-left: 220px;
   margin-top: 17px;
-}
- 
-  
+  }
+   
 }

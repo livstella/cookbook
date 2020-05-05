@@ -7,13 +7,13 @@ export default function Desserts() {
 
   useEffect(() => {
     client
-      .getEntries({ content_type: "meals", 'fields.category[match]': 'Vegan' })
+      .getEntries({ content_type: "meals", "fields.category[match]": "Vegan" })
       .then(entries => {
         setData(entries);
       })
       .catch(e => console.log(e));
   }, []);
-  
+
   return (
     <div className="recipeWrapper">
       {data &&
@@ -30,4 +30,4 @@ export default function Desserts() {
         ))}
     </div>
   );
-}
+};
