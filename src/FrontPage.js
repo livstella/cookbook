@@ -17,6 +17,7 @@ export default () => {
                         <h5 className="card-title">CSS is awesome</h5>
                         <p className="card-text">How much we can do with CSS and how straightforward it is.</p>
                     </div>
+                </div>
 
                     <div className="front-card" >
                         <img className="card-img-top" src="https://devhumor.com/content/uploads/images/April2020/javascrip_semicolon.jpg" alt="Does JS need an ;" />
@@ -24,6 +25,7 @@ export default () => {
                             <h5 className="card-title">Using JS logic</h5>
                             <p className="card-text">We have definitely learned that JavaScript always makes sense!</p>
                         </div>
+                    </div>
 
                         <div className="front-card" >
                             <img className="card-img-top" id="img-three" src="https://devhumor.com/content/uploads/images/March2020/code_doing_tasks.jpg" alt="Me shouting at my computer" />
@@ -32,8 +34,7 @@ export default () => {
                                 <p className="card-text">The simple and beautiful process of debuggin our code. A pretty process that is definitely suitable to be shared!</p>
                             </div>
                         </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     )
