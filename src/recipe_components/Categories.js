@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
-import client from "../contentful/index";
 import CategoryCard from "./CategoryCard";
 
 export default function Categories() {
   const [data, setData] = useState("");
 
   useEffect(() => {
-    client
-      .getEntries({ content_type: "categories" })
-      .then(entries => {
-        setData(entries);
+    fetch("https://floating-inlet-46173.herokuapp.com/recipe/category")
+      .then((result) => result.json())
+      .then((finalResult) => {
+        setData(finalResult);
+        console.log(finalResult);
       })
-      .catch(e => console.log(e));
+      .catch((e) => console.log(e));
   }, []);
 
   return (
@@ -19,15 +19,15 @@ export default function Categories() {
       <h1>Categories</h1>
       <div className="category-wrapper">
         {data &&
-          data.items.map((element, index) => (
+          data.map((element, index) => (
             <CategoryCard
               key={index}
-              category={element.fields.categoryName}
-              imageURL={element.fields.image.fields.file.url}
-              catDescription={element.fields.description}
+              category={element.name}
+              imageURL={element.imageurl}
+              catDescription={element.description}
             />
           ))}
       </div>
     </div>
   );
-};
+}
