@@ -1,34 +1,33 @@
 import React, { useState, useEffect } from "react";
-import client from "../contentful/index";
 import RecipeStyle from "./Recipestyle";
 
 export default function Desserts() {
   const [data, setData] = useState("");
 
   useEffect(() => {
-    client
-      .getEntries({ content_type: "meals", "fields.category[match]": "Lunch" })
-      .then(entries => {
-        setData(entries);
+    fetch("https://floating-inlet-46173.herokuapp.com/recipe/")
+      .then((result) => result.json())
+      .then((finalResult) => {
+        finalResult = finalResult.filter((recipe) => recipe.category === 15);
+        setData(finalResult);
       })
-      .catch(e => console.log(e));
+      .catch((e) => console.log(e));
   }, []);
 
   return (
     <div className="recipeWrapper">
       {data &&
-        data.items.map((element, index) => (
+        data.map((element, index) => (
           <RecipeStyle
             key={index}
-            title={element.fields.recipeName}
-            imgSrc={element.fields.image.fields.file.url}
-            catDescription={element.fields.description}
-            recipeInstructions={element.fields.instructions}
-            recipeIngredients={element.fields.ingredients}
-            recipeMeasurements={element.fields.measurements}
+            title={element.name}
+            imgSrc={element.imageurl}
+            recipeDescription={element.description}
+            recipeInstructions={element.instructions}
+            recipeIngredients={element.ingredient_list}
+            recipeMeasurements={[]}
           />
         ))}
     </div>
   );
-};
-
+}
