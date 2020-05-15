@@ -6,7 +6,7 @@ export default function Categories() {
 
   useEffect(() => {
 
-          fetch("https://floating-inlet-46173.herokuapp.com/recipe")
+          fetch("https://floating-inlet-46173.herokuapp.com/recipe/category")
           .then((res) => res.json())
           .then((res) => setData(res)
           )  
