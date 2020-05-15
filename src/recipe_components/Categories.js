@@ -2,17 +2,17 @@ import React, { useState, useEffect } from "react";
 import CategoryCard from "./CategoryCard";
 
 export default function Categories() {
-  const [data, setData] = useState("");
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("https://floating-inlet-46173.herokuapp.com/recipe/category")
-      .then((result) => result.json())
-      .then((finalResult) => {
-        setData(finalResult);
-        console.log(finalResult);
-      })
-      .catch((e) => console.log(e));
-  }, []);
+
+          fetch("https://floating-inlet-46173.herokuapp.com/recipe")
+          .then((res) => res.json())
+          .then((res) => setData(res)
+          )  
+          .catch((error) => console.log(error))
+  },[]);
+
 
   return (
     <div>
@@ -27,7 +27,7 @@ export default function Categories() {
               catDescription={element.description}
             />
           ))}
-      </div>
+          </div> 
     </div>
   );
 }
