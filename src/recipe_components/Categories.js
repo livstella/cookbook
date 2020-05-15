@@ -5,12 +5,14 @@ export default function Categories() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
+
           fetch("https://floating-inlet-46173.herokuapp.com/recipe")
           .then((res) => res.json())
           .then((res) => setData(res)
           )  
           .catch((error) => console.log(error))
   },[]);
+
 
   return (
     <div>
@@ -28,4 +30,4 @@ export default function Categories() {
           </div> 
     </div>
   );
-};
+}

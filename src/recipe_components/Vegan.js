@@ -8,10 +8,10 @@ export default function Desserts() {
   useEffect(() => {
     client
       .getEntries({ content_type: "meals", "fields.category[match]": "Vegan" })
-      .then(entries => {
+      .then((entries) => {
         setData(entries);
       })
-      .catch(e => console.log(e));
+      .catch((e) => console.log(e));
   }, []);
 
   return (
@@ -22,7 +22,7 @@ export default function Desserts() {
             key={index}
             title={element.fields.recipeName}
             imgSrc={element.fields.image.fields.file.url}
-            catDescription={element.fields.description}
+            recipeDescription={element.fields.description}
             recipeInstructions={element.fields.instructions}
             recipeIngredients={element.fields.ingredients}
             recipeMeasurements={element.fields.measurements}
@@ -30,4 +30,4 @@ export default function Desserts() {
         ))}
     </div>
   );
-};
+}
