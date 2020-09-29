@@ -4,7 +4,7 @@ const pool = new Pool({
   user: "mkyetkss",
   host: "rogue.db.elephantsql.com",
   database: "mkyetkss",
-  password: "mZ3U6K3vHXp16kkBi9wOKTnmmOw35ix9",
+  password: "nHHgWKj4gtcTT3Cjjdy34C5j14De-hu4",
   port: 5432,
 });
 

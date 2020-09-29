@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const bodyparser = require("body-parser");
 const measurement_unit_route = require("./measurement_unit_route");
